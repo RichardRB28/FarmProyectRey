@@ -16,12 +16,17 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#/modelo_list.html">List all Orders</a>
+           <a class="nav-link" href="{% url 'app:maintancevw'%}">List all Orders</a>
           </li>
         </ul>
        
       </div>
     </div>
+
+    <form class="d-flex">
+      <input class="form-control me-sm-2" type="search" placeholder="Search">
+      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+    </form>
   </nav>
 </header>
 

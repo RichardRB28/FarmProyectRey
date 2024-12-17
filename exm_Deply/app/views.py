@@ -9,10 +9,10 @@ from .forms import *
 
 # VISTA GENERAL PARA SITIO DE MANTENIMIENTO DE BASCULAS
 
-class HomeviewMaintance(generic.ListView):# nombre de la vista, hereda ListView
-    permission_required= "app.Homeview" #ubicacion del modelo
+class HomeBascosta(generic.ListView):# nombre de la vista, hereda ListView
+    permission_required= "app.view_modelo" #ubicacion del modelo
     model= Modelo # modelo de la vista
-    template_name= "app/homeTemp.html"
+    template_name= "app/homeBascostaTemp.html"
     context_objetc_name= "obj"
 
 # VISTA PARA LISTAR, BORRAR UN REGISTRO O EDITAR DE BASCULAS EN MANTENIMIENTO
@@ -20,7 +20,7 @@ class HomeviewMaintance(generic.ListView):# nombre de la vista, hereda ListView
 class ModeloView(generic.ListView):# nombre de la vista, hereda ListView
     permission_required= "app.view_modelo" #ubicacion del modelo
     model= Modelo # modelo de la vista
-    template_name= "app/modelo_list.html"
+    template_name= "modelo_list.html"
     context_objetc_name= "obj"
 
 class ModeloNew(generic.CreateView):
