@@ -1,0 +1,37 @@
+{% extends 'bases/index.html' %}
+
+{%block content%}
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Client</th>
+        <th scope="col">Inside code</th>
+        <th scope="col">Type Scale</th>
+        <th scope="col">Capacity</th>
+        <th scope="col">Collaborator</th>
+
+      </tr>
+    </thead>
+      <tr class="table-light">
+        <td>202423</td>
+        <td>Bascosta</td>
+        <td>70880</td>
+        <td>Platform</td>
+        <td>20*110 kg</td>
+        <td>Richard Rada</td>
+      </tr>
+      
+      {%for item in obj%}
+      <tr>
+        <td>{{item.idclient}}</td>
+        <td>{{item.client}}</td>
+        <td>{{item.typescale}}</td>
+        <td>{{item.capacity}}</td>
+        <td>{{item.collaborator}}</td>
+
+      </tr>
+{% endfor %}
+    </tbody>
+  </table>
+{% endblock%}
